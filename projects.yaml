@@ -15,7 +15,6 @@ module:
     bl: &module_bl
         - *module_tools
         - records/usb/usb-core.yaml
-        - records/usb/usb-msc.yaml
         - records/daplink/bootloader.yaml
         - records/daplink/drag-n-drop.yaml
         - records/daplink/settings.yaml
@@ -25,7 +24,6 @@ module:
     if: &module_if
         - *module_tools
         - records/usb/usb-core.yaml
-        - records/usb/usb-msc.yaml
         - records/usb/usb-cdc.yaml
         - records/usb/usb-webusb.yaml
         - records/usb/usb-winusb.yaml
@@ -59,56 +57,68 @@ module:
         - records/hic_hal/k20dx.yaml
         - records/usb/usb-bulk.yaml
         - records/usb/usb-hid.yaml
+        - records/usb/usb-msc.yaml
     hic_k26f: &module_hic_k26f
         - records/rtos/rtos-cm4.yaml
         - records/hic_hal/k26f.yaml
         - records/usb/usb-bulk.yaml
         - records/usb/usb-hid.yaml
+        - records/usb/usb-msc.yaml
     hic_kl26z: &module_hic_kl26z
         - records/rtos/rtos-cm0.yaml
         - records/hic_hal/kl26z.yaml
         - records/usb/usb-bulk.yaml
         - records/usb/usb-hid.yaml
+        - records/usb/usb-msc.yaml
     hic_kl27z: &module_hic_kl27z
         - records/rtos/rtos-cm0.yaml
         - records/hic_hal/kl27z.yaml
         - records/usb/usb-bulk.yaml
         - records/usb/usb-hid.yaml
+        - records/usb/usb-msc.yaml
     hic_lpc11u35: &module_hic_lpc11u35
         - records/rtos/rtos-cm0.yaml
         - records/hic_hal/lpc11u35.yaml
         - records/usb/usb-hid.yaml
+        - records/usb/usb-msc.yaml
     hic_lpc11u35_bulk: &module_hic_lpc11u35_bulk
         - records/rtos/rtos-cm0.yaml
         - records/hic_hal/lpc11u35.yaml
         - records/usb/usb-bulk.yaml
+        - records/usb/usb-msc.yaml
     hic_lpc4322: &module_hic_lpc4322
         - records/rtos/rtos-cm3.yaml
         - records/hic_hal/lpc4322.yaml
         - records/usb/usb-bulk.yaml
         - records/usb/usb-hid.yaml
+        - records/usb/usb-msc.yaml
     hic_lpc55s69: &module_hic_lpc55s69
         - records/rtos/rtos-cm33.yaml
         - records/hic_hal/lpc55s69.yaml
         - records/usb/usb-bulk.yaml
         - records/usb/usb-hid.yaml
+        - records/usb/usb-msc.yaml
     hic_m48ssidae: &module_hic_m48ssidae
         - records/rtos/rtos-cm4.yaml
         - records/hic_hal/m48ssidae.yaml
         - records/usb/usb-hid.yaml
+        - records/usb/usb-msc.yaml
     hic_max32620: &module_hic_max32620
         - records/rtos/rtos-cm4.yaml
         - records/hic_hal/max32620.yaml
         - records/usb/usb-hid.yaml
+        - records/usb/usb-msc.yaml
     hic_max32625: &module_hic_max32625
         - records/rtos/rtos-cm4.yaml
         - records/hic_hal/max32625.yaml
         - records/usb/usb-hid.yaml
+        - records/usb/usb-msc.yaml
     hic_nrf52820: &module_hic_nrf52820
         - records/rtos/rtos-cm4.yaml
         - records/hic_hal/nrf52820.yaml
         - records/usb/usb-bulk.yaml
         - records/usb/usb-hid.yaml
+        - records/usb/usb-msc.yaml
     hic_sam3u2c: &module_hic_sam3u2c
         - records/rtos/rtos-cm3.yaml
         - records/hic_hal/sam3u2c.yaml
@@ -116,6 +126,7 @@ module:
         - records/rtos/rtos-cm3.yaml
         - records/hic_hal/stm32f103xb.yaml
         - records/usb/usb-hid.yaml
+        - records/usb/usb-msc.yaml
 
 projects:
     # HIC bootloaders and all target interfaces
@@ -570,16 +581,19 @@ projects:
         - *module_if
         - *module_hic_sam3u2c
         - records/usb/usb-hid.yaml
+        - records/usb/usb-msc.yaml
         - records/board/mkit_dk_dongle_nrf5x.yaml
     sam3u2c_nrf5x_dk_ext_if:
         - *module_if
         - *module_hic_sam3u2c
         - records/usb/usb-hid.yaml
+        - records/usb/usb-msc.yaml
         - records/board/nrf5x_dk_ext.yaml
     sam3u2c_ublox_evk_nina_b1_if:
         - *module_if
         - *module_hic_sam3u2c
         - records/usb/usb-hid.yaml
+        - records/usb/usb-msc.yaml
         - records/board/ublox_evk_nina_b1.yaml
     stm32f103xb_stm32f072rb_if:
         - *module_if
